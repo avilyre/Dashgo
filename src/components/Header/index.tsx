@@ -1,5 +1,5 @@
-import { Flex, Icon, Input, Text } from "@chakra-ui/react";
-import { RiSearchLine } from "react-icons/ri";
+import { Avatar, Box, Flex, HStack, Icon, Input, Text } from "@chakra-ui/react";
+import { RiNotificationLine, RiSearchLine, RiUserAddFill } from "react-icons/ri";
 
 export function Header(): JSX.Element {
   return(
@@ -47,6 +47,35 @@ export function Header(): JSX.Element {
         />
 
         <Icon as={RiSearchLine} fontSize="20" />
+      </Flex>
+
+      <Flex
+        align="center"
+        ml="auto"
+      >
+        <HStack
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+          borderColor="gray.700"
+          spacing="6"
+        >
+          <Icon as={RiNotificationLine} />
+          <Icon as={RiUserAddFill} />
+        </HStack>
+
+        <Flex align="center">
+          <Box mr="4" textAlign="right">
+            <Text>Avily Silva</Text>
+            <Text fontSize="small" color="gray.300">
+              avily.silva@hotmail.com
+            </Text>
+          </Box>
+
+          <Avatar size="md" name="Avily Silva" src="https://github.com/avilysva.png" />
+        </Flex>
       </Flex>
     </Flex>
   );
